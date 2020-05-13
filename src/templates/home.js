@@ -61,7 +61,7 @@ const HomePageTemplate = ({
         style={{
           boxShadow:
             'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-          backgroundColor: 'rgb(255, 68, 0)',
+          backgroundColor: '#333',
           color: 'white',
           lineHeight: '1',
           padding: '0.25em',
@@ -84,7 +84,6 @@ const HomePageTemplate = ({
         </h3>
        </div>
        </div>
-       <Slider array={array} display={display}/>
        <Banner main={main.image1} mainpitch={mainpitch}/>
        <div className="container section">
        <IconMenu
@@ -97,15 +96,16 @@ const HomePageTemplate = ({
        <div className="section">
           <Testimonials testimonials={testimonials} />
        </div>
+        <section className="section">
+          <PageContent className="container content" content={content} />
+            <TagList tags={tags} langKey={langKey}/>
+        </section>
        <CardSlide
        imageInfo={imageCardSL}
        name={imageCardSL.name}
        description={imageCardSL.description}
        website={imageCardSL.website}/>
-        <section className="section">
-          <PageContent className="container content" content={content} />
-            <TagList tags={tags} langKey={langKey}/>
-        </section>
+       <Slider array={array} display={display}/>
       </div>
 )
 }
